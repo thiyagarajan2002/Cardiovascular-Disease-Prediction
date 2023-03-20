@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('.static', filename='signup.css')}}">
+ 
+  <!-- jQuery CDN Link -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+  <title>Cardiovascular Disease Prediction</title>
+</head>
+ 
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="btn">
+        <button class="loginBtn">SIGNUP</button>
+      </div>
+      <form action="/Sign_up_status" class="signUp" method="POST">
+        
+	<div class="formGroup">
+          <input type="text" name="name" placeholder="Name">
+        </div>
+
+	<div class="formGroup">
+          <input type="text" name="phone_number" placeholder="Phone number">
+        </div>
+
+	<div class="formGroup">
+          <input type="email" name="email" placeholder="Email ID">
+        </div>
+
+	<div class="formGroup">
+          <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+
+      <div class="formGroup">
+          <p>{{ status }}</p>
+        </div>
+
+        <div class="formGroup">
+	<input type = "submit" class="btn2" value = "SUBMIT" />
+        </div>
+ 
+      </form>
+       
+</body>
+ 
+</html>

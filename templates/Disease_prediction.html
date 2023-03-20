@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('.static', filename='Disease_prediction.css')}}">
+ 
+  <!-- jQuery CDN Link -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<title>Cardiovascular Disease Prediction</title>
+</head>
+ 
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="btn">
+        <button class="loginBtn">Disease prediction</button>
+      </div>
+      <form action="/Result" class="signUp" method="POST">
+  
+    <div class="formGroup">
+      <input type="hidden" name="user_id" value='{{ user_id }}' />
+    </div>
+        
+	<div class="formGroup">
+          <input type="number" name="age" placeholder="Age">
+        </div>
+
+	<div class="formGroup">
+          <input type="number" name="chest" placeholder="Chest">
+        </div>
+
+        <div class="formGroup">
+          <input type="number" name="serum_cholestoral" placeholder="Serum cholestoral">
+        </div>
+
+        <div class="formGroup">
+          <input type="number" name="resting_blood_pressure" placeholder="Resting blood pressure">
+        </div>
+
+        <div class="formGroup">
+          <input type="number" name="maximum_heart_rate_achieved" placeholder="Maximum heart rate achieved">
+        </div>
+	
+        <div class="formGroup">
+          <input type="number" name="oldpeak" placeholder="Oldpeak">
+        </div>
+
+        <div class="formGroup">
+          <input type="number" name="thal" placeholder="Thal">
+        </div>
+
+        <div class="formGroup">
+          <div class="search_categories">
+            <div class="select">
+          <select name="gender">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+            <option value="2">Other</option>
+          </select>
+        </div>
+      </div>
+         <!-- <input type="text" name="gender" placeholder="Gender">-->
+        </div>
+
+        <div class="formGroup">
+          <div class="search_categories">
+            <div class="select">
+          <select name="resting_electrocardiographic_results">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+      </div>
+          <!--<input type="text" name="resting_electrocardiographic_results" placeholder="Resting electrocardiographic results">-->
+        </div>
+
+        <div class="formGroup">
+          <div class="search_categories">
+            <div class="select">
+          <select name="exercise_induced_angina">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+      </div>
+        <!--  <input type="text" name="exercise_induced_angina" placeholder="Exercise induced angina">-->
+        </div>
+
+        <div class="formGroup">
+          <div class="search_categories">
+            <div class="select">
+          <select name="fasting_blood_sugar">
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+          </select>
+        </div>
+      </div>
+         <!-- <input type="text" name="fasting_blood_sugar" placeholder="Fasting blood sugar">-->
+        </div>
+        
+
+
+        <div class="formGroup">
+          <div class="search_categories">
+            <div class="select">
+          <select name="slope">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </div>
+          <!--<input type="text" name="slope" placeholder="Slope">-->
+        </div>
+
+        <div class="formGroup">
+          <div class="search_categories">
+            <div class="select">
+        
+          <select name="number_of_major_vessels" placeholder="number_of_major_vessels">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </div>
+          <!--<input type="text" name="number_of_major_vessels" placeholder="Number of major vessels">-->
+        </div>
+
+        <div class="formGroup">
+	<input type = "submit" class="btn2" value = "SUBMIT" />
+        </div>
+  
+        <div class="formGroup">
+          <p style="color:white">{{ result }}</p>
+        </div>
+      </form>
+       
+</body>
+ 
+</html>
