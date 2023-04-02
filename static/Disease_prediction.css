@@ -17,8 +17,8 @@ body{
   height: 120vh;
 }
 .form{
-  width: 50vh;
-  height: 850px;
+  width: 70vh;
+  height: 120vh;
   background-color: rgba(41 39 39 / 83%);
   box-shadow: 0 5px 30px black;
   
@@ -135,7 +135,7 @@ input:focus {
 */
 
 .search_categories .select{
-  width: 100%;
+  width: 50vh;
  /* background:url('arrow.png') no-repeat;*/
  /* background-position:100% center;*/
 }

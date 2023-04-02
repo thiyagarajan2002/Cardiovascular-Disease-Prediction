@@ -101,7 +101,7 @@ def Result():
             result=int(ans[0])
             status=ps.store(user_id,result)
             if status:
-                return render_template("Disease_prediction.html",result=result)
+                return render_template("Disease_prediction.html",result="In Stage of heart attack - consult doctor" if result==1 else "Do not have attack heart - Take health foods.")
         elif request.form['submit_button'] == 'LOG OUT':
             return redirect(url_for('Sign_in'))
 
