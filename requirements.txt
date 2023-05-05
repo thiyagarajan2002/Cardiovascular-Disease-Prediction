@@ -3,3 +3,4 @@ pandas
 numpy
 flask
 pickle5
+gunicorn
